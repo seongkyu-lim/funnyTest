@@ -19,7 +19,7 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
@@ -27,35 +27,6 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
-def webappDir = "$projectDir/src/main/frontend"
-
-sourceSets {
-	main {
-		resources {
-			srcDirs = ["$webappDir/build", "$projectDir/src/main/resources"]
-		}
-	}
-}
-
-processResources {
-	dependsOn "buildReact"
-}
-
-task buildReact(type: Exec) {
-	dependsOn "installReact"
-	workingDir "$webappDir"
-	inputs.dir "$webappDir"
-	group = BasePlugin.BUILD_GROUP
-	commandLine "npm", "run-script", "build"
-}
-
-task installReact(type: Exec) {
-	workingDir "$webappDir"
-	inputs.dir "$webappDir"
-	group = BasePlugin.BUILD_GROUP
-	commandLine "npm", "audit", "fix"
-	commandLine "npm", "install"
-}
 test {
 	useJUnitPlatform()
 }
