@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 const Question2 = (props) => {
   const [answer, setAnswer] = useState(Number(props.match.params.answer));
+=======
+import React from "react";
+import styled from "styled-components";
+import { NavLink } from "react-router-dom";
+
+const Question2 = () => {
+>>>>>>> ee323a3... [Test1] frontend
   return (
     <div className="Qa_container">
       <Question_container>
@@ -11,6 +19,7 @@ const Question2 = (props) => {
         <h1>당신의 선택은 ?</h1>
       </Question_container>
       <Answer_container>
+<<<<<<< HEAD
         <Choice>
           <h1>X</h1>
         </Choice>
@@ -25,12 +34,28 @@ const Question2 = (props) => {
         </Choice>
         <NavLink to={`/Result/${answer}`} style={{ textDecoration: "none" }}>
           <Button>Next</Button>
+=======
+        <NavLink to="/Result" style={{ textDecoration: "none" }}>
+          <Choice>
+            <h1>0</h1>
+          </Choice>
+          <Choice>
+            <h1>1</h1>
+          </Choice>
+          <Choice>
+            <h1>2</h1>
+          </Choice>
+          <Choice>
+            <h1>3</h1>
+          </Choice>
+>>>>>>> ee323a3... [Test1] frontend
         </NavLink>
       </Answer_container>
     </div>
   );
 };
 
+<<<<<<< HEAD
 const Button = styled.button`
   display: inline-flex;
   outline: none;
@@ -53,6 +78,9 @@ const Button = styled.button`
 
 const Choice = styled.div`
   cursor: pointer;
+=======
+const Choice = styled.div`
+>>>>>>> ee323a3... [Test1] frontend
   background: #fafafa;
   color: #642efe;
   text-align: center;
@@ -62,10 +90,13 @@ const Choice = styled.div`
   border-radius: 10px;
   box-shadow: 5px 5px 5px;
   float: left;
+<<<<<<< HEAD
   &:hover {
     background: #fafafa;
     color: #58fad0;
   }
+=======
+>>>>>>> ee323a3... [Test1] frontend
 `;
 
 const Question_container = styled.div`
