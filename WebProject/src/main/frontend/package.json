@@ -143,6 +143,10 @@
     ],
     "resetMocks": true
   },
+<<<<<<< HEAD
+=======
+  "proxy": "http://localhost:8080",
+>>>>>>> 7e5a4f934a2a705dc9baa1fd0cf1a326a54403a4
   "babel": {
     "presets": [
       "react-app"
