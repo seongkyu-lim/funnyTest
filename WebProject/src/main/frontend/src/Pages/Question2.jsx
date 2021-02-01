@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
@@ -12,6 +13,14 @@ import { NavLink } from "react-router-dom";
 
 const Question2 = () => {
 >>>>>>> ee323a3... [Test1] frontend
+=======
+import React, { useState } from "react";
+import styled from "styled-components";
+import { NavLink } from "react-router-dom";
+
+const Question2 = (props) => {
+  const [answer, setAnswer] = useState(Number(props.match.params.answer));
+>>>>>>> 6a0bd33... [setting] test1
   return (
     <div className="Qa_container">
       <Question_container>
@@ -20,6 +29,9 @@ const Question2 = () => {
       </Question_container>
       <Answer_container>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6a0bd33... [setting] test1
         <Choice>
           <h1>X</h1>
         </Choice>
@@ -34,6 +46,7 @@ const Question2 = () => {
         </Choice>
         <NavLink to={`/Result/${answer}`} style={{ textDecoration: "none" }}>
           <Button>Next</Button>
+<<<<<<< HEAD
 =======
         <NavLink to="/Result" style={{ textDecoration: "none" }}>
           <Choice>
@@ -49,6 +62,8 @@ const Question2 = () => {
             <h1>3</h1>
           </Choice>
 >>>>>>> ee323a3... [Test1] frontend
+=======
+>>>>>>> 6a0bd33... [setting] test1
         </NavLink>
       </Answer_container>
     </div>
@@ -56,6 +71,9 @@ const Question2 = () => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6a0bd33... [setting] test1
 const Button = styled.button`
   display: inline-flex;
   outline: none;
@@ -78,9 +96,12 @@ const Button = styled.button`
 
 const Choice = styled.div`
   cursor: pointer;
+<<<<<<< HEAD
 =======
 const Choice = styled.div`
 >>>>>>> ee323a3... [Test1] frontend
+=======
+>>>>>>> 6a0bd33... [setting] test1
   background: #fafafa;
   color: #642efe;
   text-align: center;
@@ -91,12 +112,18 @@ const Choice = styled.div`
   box-shadow: 5px 5px 5px;
   float: left;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6a0bd33... [setting] test1
   &:hover {
     background: #fafafa;
     color: #58fad0;
   }
+<<<<<<< HEAD
 =======
 >>>>>>> ee323a3... [Test1] frontend
+=======
+>>>>>>> 6a0bd33... [setting] test1
 `;
 
 const Question_container = styled.div`
