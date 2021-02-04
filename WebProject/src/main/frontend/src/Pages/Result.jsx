@@ -5,7 +5,7 @@ const Result = (props) => {
   const answer = props.match.params.answer;
   return (
     <Answer>
-      <h1>Your developing level is {answer}</h1>
+      <h1>Your developing level is `${LEVEL}`</h1>
     </Answer>
   );
 };

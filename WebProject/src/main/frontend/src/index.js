@@ -7,3 +7,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+//init index.js -> App.js
