@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/Result")
+@RequestMapping("/Result/{points}") // url mapping
 public class ResultController {
 
     /*
@@ -27,8 +27,10 @@ public class ResultController {
         return "Result/{points}/level";
     }
 */
-    @GetMapping("/level")
+    @GetMapping("/level") // url 추가.
     public String getRequest(){
-        return"success to send data";
+        String level ="수습생";
+
+        return"Result/{points}/level"; // return 값을 반환함.
     }
 }
