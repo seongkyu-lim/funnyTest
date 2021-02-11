@@ -11,11 +11,11 @@ const Result = (props) => {
         setLevel(response.data);
     });
     // axios.get 사용하여 데이터 백엔드에서 받아오기.
+       const handleSend = async () => {
+            const response2 = await axios.post('/Result/{points}/level', points);
+        }
+        // axios.post 사용하여 데이터 백엔드로 보내기.
 
-    const handlePost = async () => {
-        const response2 = await axios.post('/Result/{points}/level', points);
-    }
-    // axios.post 사용하여 데이터 백엔드로 보내기.
   return (
     <Answer>
        <h1>Your developing level is {points}</h1>

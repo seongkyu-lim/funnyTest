@@ -15,24 +15,24 @@ public class ResultController {
     public String getLevel(@PathVariable int data, Model model){
         String level = "";
         if(data < 2){
-            level = "수습생";
-        }
-        else if(2 <= data && data < 4){
-            level = "수련공";
-        }
-        else
-            level = "장인";
-        }
-        model.addAttribute("LEVEL", level);
-        return level;
+                level = "수습생";
     }
-*/
+        else if(2 <= data && data < 4){
+        level = "수련공";
+    }
+        else
+    level = "장인";
+}
+        model.addAttribute("LEVEL", level);
+                return level;
+                }
+                */
 
     @GetMapping("/level") // url 추가.
     public String getRequest(@PathVariable int points){
         String level = "";
         if(points < 2){
-            level = "수습생";
+        level = "수습생";
         }
         else if(2 <= points && points < 4){
             level = "수련공";
