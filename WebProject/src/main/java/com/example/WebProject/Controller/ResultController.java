@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/Result/{points}") // url mapping
+@RequestMapping("/Result/{points}") // url mapping / class에 선언을 해주면 이 controller에서 선언된 주소로 시작하는 모든 페이지를 관리하겠다는 뜻.
 public class ResultController {
 
 /*
@@ -30,16 +30,15 @@ public class ResultController {
 
     @GetMapping("/level") // url 추가.
     public String getRequest(@PathVariable int points){
-        String level = "";
+
         if(points < 2){
-        level = "수습생";
+            return "수습생";
         }
-        else if(2 <= points && points < 4){
-            level = "수련공";
+        else if((2 <= points) && (points < 4)){
+            return "수련공";
         }
         else{
-            level = "장인";
+            return "장인";
         }
-        return level; // return 값을 반환함.
     }
 }

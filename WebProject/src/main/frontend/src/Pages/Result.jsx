@@ -6,15 +6,18 @@ const Result = (props) => {
   const points = props.match.params.points;
   const[level, setLevel] = useState("");
 
+/*
     useEffect(async ()=> {
-        const response = await axios.get('/Result/{points}/level');
+                const response2 = await axios.post('/Result/{points}/level', points);
+            }, []);
+            // axios.post 사용하여 데이터 백엔드로 보내기.
+*/
+    useEffect(async ()=> {
+        const response = await axios.get("Result/{points}/level");
         setLevel(response.data);
-    });
-    // axios.get 사용하여 데이터 백엔드에서 받아오기.
-       const handleSend = async () => {
-            const response2 = await axios.post('/Result/{points}/level', points);
-        }
-        // axios.post 사용하여 데이터 백엔드로 보내기.
+    }, []);
+    // axios.get 사용하여 데이터 백엔드에서 받아오기
+    // 백엔드로 보내는 것도 잘 됨.
 
   return (
     <Answer>
